@@ -1,0 +1,23 @@
+stages:
+  - build
+pages:
+  image: node:16.13.1
+  stage: build
+  script:
+    - npm i
+    - npm run build
+    - npm run export
+    - rm -rf public/*
+    - mv out/* public
+    - echo "Compile complete."
+  only: 
+      - main
+  tags:
+    - docker
+  artifacts:
+    paths:
+      - public
+  cache:
+    paths:
+      - node_modules
+      

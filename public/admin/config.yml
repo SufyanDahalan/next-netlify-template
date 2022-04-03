@@ -1,0 +1,17 @@
+backend:
+  name: gitlab
+  repo: 22silverbullets/
+  auth_type: pkce # Required for pkce
+  app_id:  # Application ID from your GitLab settings, Go to https://docs.gitlab.com/ee/integration/oauth_provider.html#group-owned-applications to set it up
+  branch: main
+media_folder: public/img
+public_folder: img
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "content/posts/"
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string"}
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown"}
