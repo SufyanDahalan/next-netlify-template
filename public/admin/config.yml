@@ -7,11 +7,35 @@ backend:
 media_folder: public/img
 public_folder: img
 collections:
-  - name: "pages"
-    label: "Pages"
-    folder: "content/posts/"
-    create: true
-    fields:
-      - { label: "Title", name: "title", widget: "string"}
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Body", name: "body", widget: "markdown"}
+    - name: "pages"
+      label: "Pages"
+      folder: "content/posts/"
+      create: true
+      fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Publish Date", name: "date", widget: "datetime" }
+          - { label: "Body", name: "body", widget: "markdown" }
+    - name: "Informationen"
+      label: "Informationen"
+      create: false
+      files:
+        - name: "Informationen"
+          label: "Informationen"
+          file: "content/informationen.md"
+          fields:
+                - { label: "Name", name: "name", widget: "string" }
+                - { label: "Impressum", name: "impressum", widget: "string" }
+                - { label: "Datenschutz", name: "datenschutz", widget: "string" }
+                - { label: "Email", name: "email", widget: "string" }
+                - { label: "Handy", name: "handy", widget: "string" }
+                - { label: "Telefon", name: "telefon", widget: "string" }
+                - name: "Adresse"
+                  label: Adresse
+                  widget: "object" # Use the object widget
+                  fields:
+                      - { label: "Hausnummerzusatz", name: "hausnummerzusatz", widget: "string" }
+                      - { label: "Hausnummer", name: "hausnummer", widget: "number" }
+                      - { label: "Postleitzahl", name: "datenschutz", widget: "number" }
+                      - { label: "Strasse", name: "strasse", widget: "string" }
+                      - { label: "Stadt", name: "stadt", widget: "string" }
+                      - { label: "Land", name: "impressum", widget: "string" }
