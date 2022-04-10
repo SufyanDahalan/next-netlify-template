@@ -2,7 +2,7 @@ backend:
   name: gitlab
   repo: 22silverbullets/
   auth_type: pkce # Required for pkce
-  app_id:  # Application ID from your GitLab settings, Go to https://docs.gitlab.com/ee/integration/oauth_provider.html#group-owned-applications to set it up
+  app_id:  # https://gitlab.com/groups/22SilverBullets/-/settings/applications
   branch: main
 media_folder: public/img
 public_folder: img

@@ -2,8 +2,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
+    "dev": "cross-env NODE_ENV=development next dev",
+    "build": "cross-env next build",
     "start": "next start",
     "export": "npm run build && next export",
     "lint": "next lint"
@@ -16,17 +16,20 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "jimp": "^0.16.1",
-    "lqip-loader": "^2.2.1",
-    "next-optimized-images": "^2.6.2",
-    "responsive-loader": "^2.3.0",
-    "svg-sprite-loader": "^6.0.11",
-    "webp-loader": "^0.6.0",
+    "cross-env": "^7.0.3",
+    "eslint-config-next": "^12.1.4",
+    "gray-matter": "^4.0.3",
     "image-trace-loader": "^1.0.2",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^9.0.0",
-    "eslint-config-next": "^12.1.4"
+    "jimp": "^0.16.1",
+    "lqip-loader": "^2.2.1",
+    "moment": "^2.29.2",
+    "next-optimized-images": "^2.6.2",
+    "responsive-loader": "^2.3.0",
+    "svg-sprite-loader": "^6.0.11",
+    "webp-loader": "^0.6.0"
   }
 }
